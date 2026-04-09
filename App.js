@@ -3,20 +3,19 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './Screens/Login';
 import HomeScreen from './Screens/HomeScreen';
 import DetailsScreen from './Screens/Details';
-import { create } from 'react-native/types_generated/Libraries/ReactNative/ReactFabricPublicInstance/ReactNativeAttributePayload';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Produtos from './Screens/Produtos';
 
 export default function App() {
 
   const Stack = createStackNavigator();
-  const tab = createBottomTabNavigator();
 
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='Produtos'>
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="Produtos" component={Produtos} />
 
         </Stack.Navigator>
     </NavigationContainer>
